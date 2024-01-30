@@ -1,0 +1,15 @@
+body{
+  background-color: antiquewhite;
+}
+header {
+  padding: 60px;
+  text-align: center;
+  background: #55a7f3;
+  color: #fff;
+  flex: auto;
+  margin: auto;
+}
+
+form {
+  float:right
+}
