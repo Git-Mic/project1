@@ -32,3 +32,7 @@ weather updater letting you know updates on weather
 
 backup raidus area that will show activites if you are willing to travel outside of the area
 
+
+events nearby
+scheduling event
+
