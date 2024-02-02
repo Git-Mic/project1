@@ -17,7 +17,7 @@ form {
 header {
   font-family: 'Courier New', Courier, monospace;
   font-size: 25px;
-  padding: 60px;
+  padding: 30px;
   text-align: center;
   background: #55a7f3;
   color: #fff;
@@ -30,6 +30,7 @@ header {
 main {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
+  text-align: center;
 }
 /* <<<<>>>> */
 /* PICS */
@@ -78,6 +79,8 @@ button{
 
   
     
+
+
 
 
   
