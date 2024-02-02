@@ -14,7 +14,11 @@
       <!-- Search outside of your current location -->
 
       <form id="searchBtn"> 
+
         <input type="search" id="query" name="q" placeholder="Enter Desired Location" onkeydown="updateText(event)>
+
+        <input type="search" id="query" name="q" placeholder="Enter Desired Location">
+
         <button>Search</button>
       </form>
       
@@ -80,6 +84,7 @@
      <!-- will randomly generate an activity out of the list we create
           keeping in mind the location distance/radius if user does not
           want to choose one -->
+
 <!--This section of script makes a call to serpapi and diaplys names of events, should problably change to display data-->
 <script>
   const updateText = (event) => {
@@ -98,6 +103,7 @@
   } 
   
 </script>
+
 
 </body>
 </html>
