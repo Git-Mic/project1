@@ -36,3 +36,7 @@ backup raidus area that will show activites if you are willing to travel outside
 events nearby
 scheduling event
 
+<!-- add pop up box for schedule event -->
+<!-- figure out FLEX  -->
+<!--  what is HTML mockup-->
+
