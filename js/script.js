@@ -1,81 +1,29 @@
-const { getJson } = require("serpapi");
-//remove parenthesis and add code between
-const API_KEY = ('');
+// Input api key
+const API_KEY = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7';
 
-getJson({
-  engine: "google",
-  api_key: API_KEY,
-  q: "coffee",
-  location: "Austin, Texas",
-}, (json) => {
-  console.log(json["organic_results"]);
-});
+// Vvenue ID for VyStar Veterans Memorial Arena
+const venueId = 'KovZpZA6v1a';
 
+// choose how far in advance for dates
+const startDate = new Date();
+const endDate = new Date();
+endDate.setDate(endDate.getDate() + 16);
 
-// Server-side code (e.g., using Node.js and Express)
+// Format the dates in the required format for the API call (YYYY-MM-DDTHH:MM:SSZ)
+const formattedStartDate = startDate.toISOString().split('T')[0];
+const formattedEndDate = endDate.toISOString().split('T')[0];
 
-const express = require('express');
-const fetch = require('node-fetch');
+// Construct the URL for the API call
+const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&venueId=${venueId}&startDateTime=${formattedStartDate}T00:00:00Z&endDateTime=${formattedEndDate}T23:59:59Z`;
 
-const app = express();
-
-app.get('/search', async (req, res) => {
-  const searchText = req.query.q;
-  const url = `https://serpapi.com/search.json?engine=google_events&q=${searchText}&hl=en&gl=us`;
-
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
-
- 
-// Client-side code
-
-const updateText = (event) => {
-  const searchText = event.target.value;
-  const url = `http://localhost:3000/search?q=${searchText}`;
-
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      const titleText = data.events_results.map(x => x.title).join(",");
-      alert(titleText);
-    })
-    .catch(error => { 
-      alert(error.message);
-    });
-};
- 
-  //code to decode the search for client 
-  const updateText = (event) => {
-    const searchText = event.target.value;
-    const url = `http://localhost:3000/search?q=${searchText}`;
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        const titleText = data.events_results.map(x => x.title).join(",");
-        alert(titleText);
-      })
-      .catch(error => { 
-        alert(error.message);
-      });
-  };
-
+// Make the API call using fetch
+fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    // What to do with the data
+    console.log(data);
+  })
+  .catch(error => {
+    // what if their is no results
+    console.error('Error:', error);
+  });
