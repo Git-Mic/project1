@@ -2,7 +2,7 @@
 const API_KEY = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7';
 
 // Vvenue ID for VyStar Veterans Memorial Arena
-const venueId = 'KovZpZA6v1a';
+const venueId = 'KovZpZAE67AA';
 
 // choose how far in advance for dates
 const startDate = new Date();
@@ -18,12 +18,24 @@ const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${A
 
 // Make the API call using fetch
 fetch(apiUrl)
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
   .then(data => {
-    // What to do with the data
-    console.log(data);
+    // Handle the data returned from the API
+    if (data._embedded && data._embedded.events) {
+      const events = data._embedded.events;
+      events.forEach(event => {
+        console.log(event);
+      });
+    } else {
+      console.error('No events found in the response.');
+    }
   })
   .catch(error => {
-    // what if their is no results
+    // Handle any errors that occur during the API call
     console.error('Error:', error);
   });
