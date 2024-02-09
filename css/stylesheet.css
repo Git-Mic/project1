@@ -32,27 +32,107 @@ main {
   font-size: 20px;
   text-align: center;
 }
+
+h3 {
+  font-weight:800;
+  font-size: 40px;
+}
 /* <<<<>>>> */
 /* PICS */
 /* <<<<>>>> */
-.ladyRain{
-    float: left;
-    width: 500px;
-    height: 500px;
-   }
- .cryRain{
-    margin-left: 200px;
- 
-    width: 500px;
-    height: 500px;
- }  
+ AntO
+/* .responsive {
 
-.gagaRain{
-    float: right;
-    width: 500px;
-    height: 500px;
+.responsive {
+ main
+  padding: 0 6px;
+  float: left;
+  margin-left:90px;
+  width: 24.99999%;
+ AntO
+ main
+@media only screen and (max-width: 700px){
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
+    width: 100%;
+    margin-left:30px;
+  }
+ AntO
+}  */
+.imgKia{
+  display:flex;
+  flex-wrap: wrap;
+  bottom: -22%;
+  position: absolute;
+  width: 10%;
+  right: 85%;
+}
+
+.imgVystar{
+
+    display: flex;
+    flex-wrap: wrap;
+    float: center;  
+    position: absolute;
+    left: 70%;
+    bottom: -22%;
+    width: 10%;
+
+
 
 }
+
+
+
+
+
+.kiA{
+  border: 2px solid black;
+  float:left;
+    width: 500px;
+    height: 400px;
+}
+.vystaR{
+
+    border: 2px solid black;
+    float:center;
+    width: 500px;
+    height: 400px;
+
+} 
+
+ button.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+ main
+}
+/* }
+
+ button.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+} */
+/* 
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+} */
 
 /* <<<<>>>> */
 /* BUTTONS */
@@ -65,17 +145,6 @@ button{
   
 }
 
-.findmeBtn{
-  background-color:  #55a7f3;
-  color: #fff;
-  
-}
-.schBtn{
-    background-color:  #55a7f3;
-    color: #fff;
-
-}
-  
 
   
     
