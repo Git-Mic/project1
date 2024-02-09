@@ -8,7 +8,7 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
     fetch(WEATHER_API_URL).then(response => response.json()).then(data => {
         // Filter the forecasts to get only one forecast per day
         const uniqueForecastDays = [];
-        const fiveDaysForecast = data.list.filter(forecast => {
+        const fifteenDaysForecast = data.list.filter(forecast => {
             const forecastDate = new Date(forecast.dt_txt).getDate();
             if (!uniqueForecastDays.includes(forecastDate)) {
                 return uniqueForecastDays.push(forecastDate);
@@ -21,7 +21,7 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
         weatherCardsDiv.innerHTML = "";
 
         // Creating weather cards and adding them to the DOM
-        fiveDaysForecast.forEach((weatherItem, index) => {
+        fifteenDaysForecast.forEach((weatherItem, index) => {
             const html = createWeatherCard(cityName, weatherItem, index);
             if (index === 0) {
                 currentWeatherDiv.insertAdjacentHTML("beforeend", html);
@@ -34,45 +34,6 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
     });
 }
 
-const { getJson } = require("serpapi");
-//remove parenthesis and add code between
-const API_KEY = ('');
-
-getJson({
-  engine: "google",
-  api_key: API_KEY,
-  q: "coffee",
-  location: "Austin, Texas",
-}, (json) => {
-  console.log(json["organic_results"]);
-});
-
-
-// Server-side code (e.g., using Node.js and Express)
-
-const express = require('express');
-const fetch = require('node-fetch');
-
-const app = express();
-
-app.get('/search', async (req, res) => {
-  const searchText = req.query.q;
-  const url = `https://serpapi.com/search.json?engine=google_events&q=${searchText}&hl=en&gl=us`;
-
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
-
- 
 // Client-side code
 
 const updateText = (event) => {
