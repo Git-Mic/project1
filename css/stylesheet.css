@@ -61,7 +61,7 @@ h3 {
     margin-left:30px;
   }
 }  */
-.imgKia{
+/* .imgKia{
   display:flex;
   flex-wrap: wrap;
   bottom: -22%;
@@ -82,13 +82,13 @@ h3 {
 
 
 
-}
+} */
 
 
 
 
 
-.kiA{
+/* .kiA{
   border: 2px solid black;
   float:left;
     width: 500px;
@@ -100,7 +100,7 @@ h3 {
     float:center;
     width: 500px;
     height: 400px;
-}
+} */
 /* }
 
  button.polaroid {
@@ -129,7 +129,7 @@ button{
 
 .allColumns {
   float: left;
-  
+
   width: 40%;
   padding-left: 130px; 
   text-align: center;
