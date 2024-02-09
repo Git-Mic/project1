@@ -1,6 +1,6 @@
-MikeG
+// MikeG
 // Input api key
-const API_KEY = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7';
+const TPI_KEY = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7';
 
 // Vvenue ID for VyStar Veterans Memorial Arena
 const venueId = 'KovZpZAE67AA';
@@ -15,7 +15,7 @@ const formattedStartDate = startDate.toISOString().split('T')[0];
 const formattedEndDate = endDate.toISOString().split('T')[0];
 
 // Construct the URL for the API call
-const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&venueId=${venueId}&startDateTime=${formattedStartDate}T00:00:00Z&endDateTime=${formattedEndDate}T23:59:59Z`;
+const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${TPI_KEY}&venueId=${venueId}&startDateTime=${formattedStartDate}T00:00:00Z&endDateTime=${formattedEndDate}T23:59:59Z`;
 
 // Make the API call using fetch
 fetch(apiUrl)
@@ -26,22 +26,43 @@ fetch(apiUrl)
     return response.json();
   })
   .then(data => {
+    console.log('bugs bunny')
+    console.log(data)
+    var events= data._embedded.events
+    console.log(events)
+    console.log('yesss')
+    for(var i= 0; i <events.length; i++ ){
+        console.log(events[i].name)
+        console.log(events[i].url)
+ }
+
+    // for(var i= o; i<data._events; i++){
+    //     console.log(events[i].name)
+    //     console.log(events[i].url)
+    // }
+    
+    
+    
+    
+    
+    
+    
     // Handle the data returned from the API
-    if (data._embedded && data._embedded.events) {
-      const events = data._embedded.events;
-      events.forEach(event => {
-        console.log(event);
-      });
-    } else {
-      console.error('No events found in the response.');
-    }
+    // if (data._embedded && data._embedded.events) {
+    //   const events = data._embedded.events;
+    //   events.forEach(event => {
+    //     console.log(event);
+    //   });
+    // } else {
+    //   console.error('No events found in the response.');
+    // }
   })
   .catch(error => {
     // Handle any errors that occur during the API call
     console.error('Error:', error);
   });
-=======
- Yaya
+
+ 
 // my api key TEMP ====>>>>
 const API_KEY = "cbde34e952d460bd41b32f1481b9f5b4"; // API key for OpenWeatherMap API
 // my api key TEMP ====>>
@@ -77,89 +98,40 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
     });
 }
 
-<<<<<<< HEAD
-=======
-const { getJson } = require("serpapi");
-//remove parenthesis and add code between
-const API_KEY = ('');
+// ===== WHAT NEEDS TO BE DONE TO RUN THROUGH
+// EACH EVENT WITH EVENTS/IMGS/TIMES/
 
-getJson({
-  engine: "google",
-  api_key: API_KEY,
-  q: "coffee",
-  location: "Austin, Texas",
-}, (json) => {
-  console.log(json["organic_results"]);
-});
+// fetch(website)
+// .then(function(response){return response.json()})
+// .then(function(data){
+//     console.log(data)
+//     for(var i =o; <data.length; i++){
+
+//         var maindiv = document.createElement('div')
+//         var title = document.createElement('h1')
+//         var date= document.createElement('p')
+//         var coneterImg= document.createElement('img')
+        
+//         title.textContent=data[i].name
+//         date.textContent=data[i].date
+//         concertImg.setAttribute(src, data[i].poster)
+
+//         maindiv.appendChild(title, date, coneterImg)
+//         document.body.appendChild(maindiv)
+
+//     }
 
 
-// Server-side code (e.g., using Node.js and Express)
 
-const express = require('express');
-const fetch = require('node-fetch');
+// })
 
-const app = express();
-
-app.get('/search', async (req, res) => {
-  const searchText = req.query.q;
-  const url = `https://serpapi.com/search.json?engine=google_events&q=${searchText}&hl=en&gl=us`;
-
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
-
- 
-// Client-side code
-
-const updateText = (event) => {
-  const searchText = event.target.value;
-  const url = `http://localhost:3000/search?q=${searchText}`;
-
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      const titleText = data.events_results.map(x => x.title).join(",");
-      alert(titleText);
-    })
-    .catch(error => { 
-      alert(error.message);
-    });
-};
- 
-  //code to decode the search for client 
-  const updateText = (event) => {
-    const searchText = event.target.value;
-    const url = `http://localhost:3000/search?q=${searchText}`;
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        const titleText = data.events_results.map(x => x.title).join(",");
-        alert(titleText);
-      })
-      .catch(error => { 
-        alert(error.message);
-      });
-  };
-
- main
-
->>>>>>> bcd72fba30869c7bfee5010403e6a62f40d37cbc
+// {name:<img tage></img>
+// date:
+// poster
+// }
+// // what above code means
+// <div>
+//     <h1>Website</h1>
+//     <p>1/1/2024</p>
+//     <img>IMG</img>
+// </div>
