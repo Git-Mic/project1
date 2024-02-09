@@ -40,13 +40,26 @@ h3 {
 /* <<<<>>>> */
 /* PICS */
 /* <<<<>>>> */
+<<<<<<< HEAD
 /* .responsive {
+=======
+ AntO
+/* .responsive {
+
+.responsive {
+ main
+>>>>>>> bcd72fba30869c7bfee5010403e6a62f40d37cbc
   padding: 0 6px;
   float: left;
   margin-left:90px;
   width: 24.99999%;
+<<<<<<< HEAD
 } */
 /* 
+=======
+ AntO
+ main
+>>>>>>> bcd72fba30869c7bfee5010403e6a62f40d37cbc
 @media only screen and (max-width: 700px){
   .responsive {
     width: 49.99999%;
@@ -60,6 +73,10 @@ h3 {
     width: 100%;
     margin-left:30px;
   }
+<<<<<<< HEAD
+=======
+ AntO
+>>>>>>> bcd72fba30869c7bfee5010403e6a62f40d37cbc
 }  */
 .imgKia{
   display:flex;
@@ -100,6 +117,23 @@ h3 {
     float:center;
     width: 500px;
     height: 400px;
+<<<<<<< HEAD
+=======
+
+} 
+
+ button.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+ main
+>>>>>>> bcd72fba30869c7bfee5010403e6a62f40d37cbc
 }
 /* }
 
@@ -126,17 +160,6 @@ button{
   
 }
 
-.findmeBtn{
-  background-color:  #55a7f3;
-  color: #fff;
-  
-}
-.schBtn{
-    background-color:  #55a7f3;
-    color: #fff;
-
-}
-  
 
   
     
