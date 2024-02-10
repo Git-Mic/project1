@@ -2,7 +2,11 @@
 // Input api key
 const TPI_KEY = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7';
 
+<<<<<<< HEAD
 // Vvenue ID for Kia Orlando
+=======
+// Vvenue ID for VyStar Veterans Memorial Arena
+>>>>>>> 835088e (displaying everything to the screen)
 const venueId = 'KovZpZAEvEEA';
 
 // choose how far in advance for dates
@@ -15,7 +19,11 @@ const formattedStartDate = startDate.toISOString().split('T')[0];
 const formattedEndDate = endDate.toISOString().split('T')[0];
 
 // Construct the URL for the API call
+<<<<<<< HEAD
 const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${TPI_KEY}&venueId=${venueId}&startDateTime=${formattedStartDate}T00:00:00Z&endDateTime=${formattedEndDate}T23:59:59Z`;
+=======
+const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${TPI_KEY}&venueId=${venueId}`;
+>>>>>>> 835088e (displaying everything to the screen)
 
 // Make the API call using fetch
 fetch(apiUrl)
