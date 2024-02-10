@@ -2,8 +2,8 @@
 // Input api key
 const TPI_KEY = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7';
 
-// Vvenue ID for VyStar Veterans Memorial Arena
-const venueId = 'KovZpZAE67AA';
+// Vvenue ID for Kia Orlando
+const venueId = 'KovZpZAEvEEA';
 
 // choose how far in advance for dates
 const startDate = new Date();
@@ -28,7 +28,9 @@ fetch(apiUrl)
   .then(data => {
     console.log("bugs bunny")
     var events = data._embedded.events
-   
+    var eventsImg = document.createElement("img")
+    var date = data._embedded.events.dates.start.localDate
+
 
     console.log(events)
     console.log("Yess")
@@ -37,9 +39,14 @@ fetch(apiUrl)
       console.log(events[i].url)
       console.log(events[i].dates.start.localDate)
       console.log(events[i].dates.start.localTime)
+      console.log(events[i].images)
+      console.log(date)
       
-      
-      
+    var event = document.createElement("div")
+    var title = document.createElement("h1")
+       
+    title.textContent = events[i].name
+
 
   }});
 
