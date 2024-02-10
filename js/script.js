@@ -8,7 +8,7 @@ const venueId = 'KovZpZAE67AA';
 // choose how far in advance for dates
 const startDate = new Date();
 const endDate = new Date();
-endDate.setDate(endDate.getDate() + 16);
+endDate.setDate(endDate.getDate() + 25);
 
 // Format the dates in the required format for the API call (YYYY-MM-DDTHH:MM:SSZ)
 const formattedStartDate = startDate.toISOString().split('T')[0];
@@ -26,7 +26,7 @@ fetch(apiUrl)
     return response.json();
   })
   .then(data => {
-    console.log('bugs bunny')
+    
     console.log(data)
     var events= data._embedded.events
     console.log(events)

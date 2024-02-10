@@ -1,0 +1,66 @@
+/* <<<<>>>> */
+/* BODY */
+/* <<<<>>>> */
+/* /* body{
+    background-color: rgb(54, 137, 209);
+} */
+body {
+    background-color: rgb(54, 137, 209);
+    
+}
+
+
+
+*{
+    box-sizing:border-box ;
+}
+
+.allColumns {
+   float: left;
+   display: block;
+   width: 33.3%;
+   padding: 10px; 
+   border: 2px solid black;
+
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 768px)  {
+    .allColumns {
+        width: 100%;
+    }
+    
+}
+
+
+.event-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    display: block;
+    width: 33.3%;
+    padding: 10px;
+    border: 2px solid black;
+  
+
+  
+
+
+}
+
+
+
+
+
+.event-image {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px;
+    float: center;
+}
+

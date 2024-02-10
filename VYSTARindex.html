@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/VystarSheet.css">
+    <title>EVENT DISPLAY</title>
+<!--  -->
+
+
+
+</head>
+
+
+<!-- <body> -->
+  <!-- <h1>CHECKOUT THESE EVENTS HAPPENING AT ORLANDOS KIA CENTER</h1> -->
+<!-- replaces anchor image for linked event -->
+
+<!-- <div class="row"> -->
+
+ <!-- <div class="allColumns">
+  <a href="https://www.ticketmaster.com/cody-johnson-the-leather-tour-jacksonville-florida-02-17-2024/event/22005F34E7FEDAAC">
+   <img src="https://s1.ticketm.net/dam/a/c86/ade60725-9631-47ec-aab4-3f062a993c86_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%;">  
+  </a>
+</div> -->
+<!--  -->
+<!-- <div class="allColumns">
+     <a href="https://www.ticketmaster.com/pbr-unleash-the-beast-jacksonville-florida-02-24-2024/event/22005F42DA1B0E00">
+          <img src="https://s1.ticketm.net/dam/a/23c/dc4c5dd1-9752-462c-ac8b-ea6571cfb23c_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%">
+     </a>
+   </div> -->
+<!--  -->
+<!-- <div class="allColumns">
+     <a href="https://www.ticketmaster.com/pbr-unleash-the-beast-jacksonville-florida-02-23-2024/event/22005F42DA140DFE">
+          <img src="https://s1.ticketm.net/dam/a/23c/dc4c5dd1-9752-462c-ac8b-ea6571cfb23c_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%">
+     </a>
+   </div> -->
+ <!--  -->
+<!-- <div class="allColumns">
+     <a href="https://www.ticketmaster.com/bryan-adams-so-happy-it-hurts-jacksonville-florida-03-05-2024/event/22005F6AEA5C14BB">
+          <img src="https://s1.ticketm.net/dam/a/56d/60c880a1-f8b6-4882-99b1-b916d939f56d_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%">
+     </a>
+   </div> -->
+<!--  -->
+<!-- <div class="allColumns">
+        <a href="https://www.ticketmaster.com/event/Z7r9jZ1A7eZe6">
+             <img src="https://s1.ticketm.net/dam/a/4b9/87c87145-7b9e-4f55-b67f-bbe9988ee4b9_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%">
+        </a>
+      </div> -->
+<!--  -->
+<!-- <div class="allColumns">
+     <a href="https://www.ticketmaster.com/jacksonville-icemen-vs-orlando-solar-bears-jacksonville-florida-02-10-2024/event/22005F158EEBBD00">
+          <img src="https://s1.ticketm.net/dam/a/97d/a358c83d-2a2c-4696-8692-8ba2f40a997d_506211_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%">
+     </a>
+   </div> -->
+<!--  -->
+  
+<!--  -->
+<!-- <div class="allColumns">
+     <a href="https://www.ticketmaster.com/pbr-twoday-package-ticket-includes-access-jacksonville-florida-02-23-2024/event/22005F42D5060D95">
+          <img src="https://s1.ticketm.net/dam/a/23c/dc4c5dd1-9752-462c-ac8b-ea6571cfb23c_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%">
+     </a>
+   </div> -->
+<!--  -->
+<!-- <div class="allColumns">
+  <a href="https://www.ticketmaster.com/jacksonville-icemen-vs-savannah-ghost-pirates-jacksonville-florida-02-18-2024/event/22005F158EF1BD22">
+       <img src="https://s1.ticketm.net/dam/a/97d/a358c83d-2a2c-4696-8692-8ba2f40a997d_506211_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%">
+  </a>
+</div> -->
+<!--  -->
+<!-- <div class="allColumns">
+     <a href="https://www.ticketmaster.com/jacksonville-icemen-vs-florida-everblades-jacksonville-florida-02-16-2024/event/22005F158EEDBD0B">
+          <img src="https://s1.ticketm.net/dam/a/97d/a358c83d-2a2c-4696-8692-8ba2f40a997d_506211_ARTIST_PAGE_3_2.jpg" alt="vystaR" style="width:100%">
+     </a>
+   </div>   -->
+   <!-- </div> -->
+   
+
+<body>
+ <h1>Events at Vystar Memorial Arena, Jacksonville, FL</h1>
+ <div id="event-container">
+     <!-- Event rows will be dynamically inserted here -->
+ </div>
+
+
+ <script>
+     // Function to fetch event data from Ticketmaster API
+     function fetchEventData() {
+         const apiapi = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7'; // Replace with your Ticketmaster API key
+         const venueId = 'KovZpZAE67AA'; // Vystar Memorial Arena venue ID
+         const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${apiapi}&venueId=${venueId}&size=5`;
+         fetch(url)
+             .then(response => response.json())
+             .then(data => {
+                 const events = data._embedded.events;
+                 const eventContainer = document.getElementById('event-container');
+                 events.forEach(event => {
+                     // Create event row
+                     const eventRow = document.createElement('div');
+                     eventRow.classList.add('event-row');
+                     
+                     // Create anchor element for ticket purchase
+                     const anchor = document.createElement('a');
+                     anchor.href = event.url;
+                     anchor.target = '_blank'; // Open in new tab
+                     
+                     // Create image element for event
+                     const img = document.createElement('img');
+                     img.src = event.images[0].url; // Assuming the first image is the main one
+                     img.alt = event.name;
+                     img.classList.add('event-image');
+                     
+                     // Append image to anchor and anchor to row
+                     anchor.appendChild(img);
+                     eventRow.appendChild(anchor);
+
+                     // Append row to container
+                     eventContainer.appendChild(eventRow);
+                 });
+             })
+             .catch(error => console.error('Error fetching event data:', error));
+     }
+
+     // Call fetchEventData function to fetch and display event data
+     fetchEventData();
+ </script>
+
+
+
+
+
+
+
+    
+   
+
+
+
+
+    <!-- <div id="tables" class="col1">
+    <table style=" width:100%">
+        <tr style="height:250px">
+         
+                              </td>
+          <td>img2</td>
+          <td>img3</td>
+        </tr>
+        <tr style="height:250px;">
+          <td>img4</td>
+          <td>img5</td>
+          <td>img6</td>
+        </tr>
+        <tr style="height:250px;">
+            <td>img7</td>
+            <td>img8</td>
+            <td>img9</td>
+          </tr>
+      </table>
+</div> -->
+
+<!-- WEATHER PART -->
+
+
+
+
+
+
+
+    
+</body>
+</html>

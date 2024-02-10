@@ -127,9 +127,12 @@ button{
 }
 
 
+
+
+
 .allColumns {
   float: left;
-
+  height: auto;
   width: 40%;
   padding-left: 130px; 
   text-align: center;
