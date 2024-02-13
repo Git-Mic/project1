@@ -2,15 +2,10 @@
 /* BODY */
 /* <<<<>>>> */
 body{
-  background-color: antiquewhite;
+  background-color: #b8a3a3;
 }
-/* <<<<>>>> */
-/* SEARCH BAR */
-/* <<<<>>>> */
-/* form {
-  float:right;
 
-} */
+
 /* <<<<>>>> */
 /* HEADER */
 /* <<<<>>>> */
@@ -19,146 +14,73 @@ header {
   font-size: 25px;
   padding: 30px;
   text-align: center;
-  background: #55a7f3;
-  color: #fff;
+  background: #1b1011;
+  color: #faf6f6;
   flex: auto;
   margin: auto;
+  border: 2px solid pink;
 }
 /* <<<<>>>> */
 /* MAIN */
 /* <<<<>>>> */
 main {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 30px;
   text-align: center;
 }
 
 h3 {
-  font-weight:800;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 25px;
+  border: 5px solid pink;
+  padding: 10px;
+  color: white;
+  background-color: black;
+
+  
+
+}
+
+
+
+
+
+
+/* evened space between items */
+.image-holder {
+  display: flex;
+  justify-content: space-between; 
+
+}
+/* centered text with iamges, created space between images
+and added padding, added in border and "cool" effects */
+.images {
+  text-align: center;
+  width: 45%; 
+  box-sizing: border-box; 
+  padding: 10px; 
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: opacity 0.1s;
+  border: 2px solid pink;
+  color: white;
+  background-color: black;
+}
+.images:hover{
+  opacity: 0.8;
+}
+/* /* font size for images increased and added space between images and bottom of webpage */
+ .images h1 {
   font-size: 40px;
+  margin-bottom: 10px; 
 }
-/* <<<<>>>> */
-/* PICS */
-/* <<<<>>>> */
-/* .responsive {
-  padding: 0 6px;
-  float: left;
-  margin-left:90px;
-  width: 24.99999%;
-} */
-/* 
-@media only screen and (max-width: 700px){
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  
-  }
-}
-
-@media only screen and (max-width: 500px){
-  .responsive {
-    width: 100%;
-    margin-left:30px;
-  }
-}  */
-/* .imgKia{
-  display:flex;
-  flex-wrap: wrap;
-  bottom: -22%;
-  position: absolute;
-  width: 10%;
-  right: 85%;
-}
-
-.imgVystar{
-
-    display: flex;
-    flex-wrap: wrap;
-    float: center;  
-    position: absolute;
-    left: 70%;
-    bottom: -22%;
-    width: 10%;
-
-
-
-} */
-
-
-
-
-
-/* .kiA{
-  border: 2px solid black;
-  float:left;
-    width: 500px;
-    height: 400px;
-}
-.vystaR{
-
-    border: 2px solid black;
-    float:center;
-    width: 500px;
-    height: 400px;
-} */
-/* }
-
- button.polaroid {
-  width: 80%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-} */
-/* 
-div.container {
-  text-align: center;
-  padding: 10px 20px;
-} */
-
-/* <<<<>>>> */
-/* BUTTONS */
-/* <<<<>>>> */
-button:hover{background-color: blue;}
-
-button{
-  outline:none;
-  font-size: 1.5rem;
-  
-}
-
-
-
-
-
-.allColumns {
-  float: left;
-  height: auto;
-  width: 40%;
-  padding-left: 130px; 
-  text-align: center;
-
- }
-
-
-
-
-
-
-.row::after{
-  content: "";
-  clear: both;
-  display: block;
- 
-}
-
-
-@media screen and (max-width: 768px) {
-  .allImgs {
-      width: 100%;
-  }
-}
-  
-    
+/* resized images to be same size */
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}   
 
 
 
