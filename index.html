@@ -10,99 +10,68 @@
 </head>
 
 <body>
-       <!-- NAVAGATION AREA -->
-      <!-- Search outside of your current location -->
-
-      <form id="searchBtn"> 
-
-        <input type="search" id="query" name="q" placeholder="Enter Desired Location" onkeydown="updateText(event)>
-
-        <input type="search" id="query" name="q" placeholder="Enter Desired Location">
-
-        <button>Search</button>
-      </form>
       
   
     
     <!-- HEADER -->
     <header>
-        <h1>RAINY DAYZ</h1>
-      <p> Where finding something to do indoors while it rains is at your fingertips</p>
+        <h1>Event Vitalz</h1>
+      <p>Food at these events aren't cheap! Satisfy your hunger, then savor the event! </p>
     </header>
 
     
     <!-- BODY -->
     <main>
-    <section id="summary">
-        <h2>What is Rainy Dayz you ask!?</h2>
-        <p>Rainy Dayz is an application used globally that
-            will allow you to schedule events and/or activities
-            near you and will track the weather of your upcomming events.
-            The intended use is for the user to receive updates daily on any weather
-            changes that may impact their upcoming event. If user cancels 
-            their event, based off incliment weather or not, use will be given
-            suggestions of activities/events that are nearby.
+    <section id="main1">
+        <h2>What is Event Vitalz you ask!?</h2>
+        <p>Event Vitalz is an application used in Florida that
+            will allow you to look up events at the Orlando Kia Center Arena or the VyStar Veteran's Memorial Areana in Jacksonville
+            and get further details on each event. Since food is either overpriced or not offered at all at these events, Event Vitalz
+            has located all nearby resturants for you to enjoy either before or after!
+            
         </p>
     </section>
         
-    <section id="useage">
-        <h2>Schedule your events and activities now and we will keep you up
-         to date on the weather as your event day apporaches   
-        </h2>
-      
-</section>
-        <!-- break into 2 different containers -->
-        <div id="schdNow" class="noW" >
-            <h3>Schedule an event now for a later date by clicking
-                Schedule Event
-            <button id="schBtn" class="schBtn btn">Schedule Event</button> 
-           </h3>
-           
-           <h3> Find events that are happening near you now or in the 
-                near/very near future by clicking Find My Location
-       <button id="findmeBtn" class="findmeBtn btn">Find My Location</button>
-          </h3>
+  <!--  -->
+       
+            <h3>Click on a venue below to see dates for upcoming events!</h3>
         </div>
-    </section>
-</main>
+    
+
      <!-- add pics make it look pretty -->
-     <img src="https://media.istockphoto.com/id/1143045785/photo/joyful-woman-walking-in-rainy-weather.jpg?s=612x612&w=0&k=20&c=I-I-VjWJBPiKJW9fBV5tomxeQ8pZqcdVswGx1ZD0NJI="
-     alt="happyladyinrain" class="ladyRain">
+     
 
-     <img src="https://img.freepik.com/premium-photo/man-crying-rain_777078-31069.jpg"
-     alt="cryingman" class="cryRain">
- 
+     <div class="image-holder">
+     <div class="images">
+        <h1>Orlando Kia Center</h1>
+           <a href="Otownindex.html">
+             <img src="./assets/kiacenter.jpg" alt= "kiacenter" >
+          </a>
+     </div>
 
-   
-     <img src="https://thefortyfive.com/wp-content/uploads/Rain-On-Me.jpg"
-     alt="gagaandari" class="gagaRain">   
+     <!-- made 2 different divs to seprate images -->
+
+     <div class="images">
+       <h1>Jacksonville Vystar Arena</h1>
+           <a href="VYSTARindex.html" >
+             <img src="./assets/vystar.jpg"  alt="vyster" >
+           </a>
+  
+     </div>
+
+     </div>
+</main>
+
+  
     
  
 
-     
-     <!-- created a Find me an Activity button -->
-     <!-- will randomly generate an activity out of the list we create
-          keeping in mind the location distance/radius if user does not
-          want to choose one -->
+   
 
-<!--This section of script makes a call to serpapi and diaplys names of events, should problably change to display data-->
-<script>
-  const updateText = (event) => {
-    const searchText = event.target.value;
-    //let url = "https://serpapi.com/search.json?engine=google_events&q="+searchText+"&hl=en&gl=us"
-    let url = "https://serpapi.com/search.json?engine=google_events&q=flor&hl=en&gl=us"
-    fetch(url, {
-      method: 'GET',
-      mode: 'no-cors' // Set the mode to 'no-cors'
-    }).then(response => {
-      const titleText = response["events_results"].map(x => x.title).join(",");
-      alert(titleText);
-    }).catch(error => { 
-      alert(error);
-    })  
-  } 
+
   
-</script>
+
+<!-- <script src="./js/script.js"></script> -->
 
 
 </body>
