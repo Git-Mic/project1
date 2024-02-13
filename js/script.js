@@ -1,5 +1,5 @@
 const TPI_KEY = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7';
-// Vvenue ID for VyStar Veterans Memorial Arena
+// Vvenue ID for Orlando Kia Center
 const venueId = 'KovZpZAEvEEA';
 // choose how far in advance for dates
 //const startDate = new Date();
