@@ -42,3 +42,150 @@ fetch(apiUrl)
      
       
   }});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function required() {            // Defining requierd function
+    console.log("This function is required.");
+  }
+
+
+  const express = required('express');
+  const axios = required('axios');
+  
+
+  
+function get() {           // Define the get function
+    return "This is the get function.";
+}
+
+// Call the function "get"
+let result = get();
+console.log(result);
+
+
+  
+  get('/api/places/nearby', async (req, res) => {
+    try {
+      const { latitude, longitude, radius } = req.query;
+      const apiKey = 'AIzaSyDI8esx957Fm8J0iTt9YAD4gUK13nKDuz0';
+      const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${28.5383},${-81.3792}&radius=${radius}&type=restaurant&key=${'AIzaSyDI8esx957Fm8J0iTt9YAD4gUK13nKDuz0'}`;
+  
+      const response = await axios.get(url);
+      res.json(response.data);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Server Error' });
+    }
+  });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
