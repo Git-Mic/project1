@@ -48,10 +48,9 @@ set all images to the same size */
  
 }
 
-/* clears and fil */
-/* .gridCont:after {
+
+.gridCont:after {
     content: "";
     display: table;
     clear: both;
-} */
-
+}
