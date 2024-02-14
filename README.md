@@ -3,7 +3,7 @@ First group project. group name group project people in project
 The Project name is Rainy Dayz
 Anthony O, Michael D, Yahaira S, Michael G
 
-1. Foursquare API >`https://api.foursquare.com/v3/places/search?${searchParams}` <
+1. Google Places >`https://maps.googleapis.com/maps/api/place/nearbysearch/json` <
    
 2. Ticketmaster > https://app.ticketmaster.com/discovery/v2/events.json?apikey=${TPI_KEY}&venueId=${venueId} <
 
@@ -18,7 +18,7 @@ will look places to eat near your venue.
 
 Anthony worked on the styling and css
 Michael worked on ticketmaster Javascript
-Jahaira worked on Foursquare Api 
+Jahaira worked on google Places Api 
 Michael worked on HTML
 
 The idea behind this app is that whenever you go out to a venue, concert ,etc it is usually pretty expensive to dine there.In order to help the user decide what they want to eat we provide a service that when you pick a location you are given retaurants within driving distance of your venue.
@@ -33,9 +33,6 @@ First group project.
 group name
 group project
 people in project
-
-the 2 apis we are 
-get events get restaurants 
 
 big local events (opening of the beaches, dancing in the streets, etc)
 what bands are playing at free birds, jax amplitheatre
