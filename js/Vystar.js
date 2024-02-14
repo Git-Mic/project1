@@ -1,7 +1,14 @@
 const TPI_KEY = '53YF2UN6JBTNz0NB3UGOu9GjoEcoxCx7';
 // Vvenue ID for VyStar Veterans Memorial Arena
 const venueId = 'KovZpZAE67AA';
-
+// choose how far in advance for dates
+//const startDate = new Date();
+//const endDate = new Date();
+//endDate.setDate(endDate.getDate() + 16);
+// Format the dates in the required format for the API call (YYYY-MM-DDTHH:MM:SSZ)
+//const formattedStartDate = startDate.toISOString().split('T')[0];
+//const formattedEndDate = endDate.toISOString().split('T')[0];
+// Construct the URL for the API call
 const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${TPI_KEY}&venueId=${venueId}`;
 // Make the API call using fetch
 fetch(apiUrl)
