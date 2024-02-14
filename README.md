@@ -18,7 +18,7 @@ will look places to eat near your venue.
 
 Anthony worked on the styling and css
 Michael worked on ticketmaster Javascript
-Jahaira worked on google Places Api 
+Yahaira worked on google Places Api 
 Michael worked on HTML
 
 The idea behind this app is that whenever you go out to a venue, concert ,etc it is usually pretty expensive to dine there.In order to help the user decide what they want to eat we provide a service that when you pick a location you are given retaurants within driving distance of your venue.
