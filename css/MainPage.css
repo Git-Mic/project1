@@ -1,8 +1,9 @@
+
 /* <<<<>>>> */
 /* BODY */
 /* <<<<>>>> */
 body{
-  background-color: #b8a3a3;
+  background-color: #B8A3A3;
 }
 /* <<<<>>>> */
 /* HEADER */
@@ -15,8 +16,8 @@ header {
   font-size: 25px;
   padding: 30px;
   text-align: center;
-  background: #1b1011;
-  color: #faf6f6;
+  background: #1B1011;
+  color: #FAF6F6;
   margin: auto;
   border: 2px solid pink;
 }
@@ -38,20 +39,18 @@ h3 {
   color: white;
   background-color: black;
 }
-
 /* evened space between images */
 .image-holder {
   display: flex;
-  justify-content: space-between; 
-
+  justify-content: space-between;
 }
 /* centered text with iamges, created space between images
 and added padding, added in border and "cool" effects */
 .images {
   text-align: center;
-  width: 45%; 
-  box-sizing: border-box; 
-  padding: 10px; 
+  width: 45%;
+  box-sizing: border-box;
+  padding: 10px;
   height: 500px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -67,18 +66,11 @@ and added padding, added in border and "cool" effects */
 /* /* font size for images increased and added space between images and bottom of webpage */
  .images h1 {
   font-size: 40px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 /* resized images to be same size and cut off extra image from container is too big */
 .images img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-}   
-
-
-
-
-  
-    
-
+  object-fit: cover;
+}
