@@ -120,13 +120,5 @@ function initMap() {
 
 
 
-Message project-group
-
-
-
-
-
-
-
 
 
