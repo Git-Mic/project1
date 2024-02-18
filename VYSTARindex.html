@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/VystarSheet.css">
     <title>EVENT DISPLAY</title>
-   
+    <link rel="stylesheet" href="css/OtownSheet.css">
 </head>
-
-
-
 <!-- <body> -->
-
     <body>
-    
-    
       <div class="topBar">
-        <h2 class="eventsNrest">CHECKOUT THESE EVENTS HAPPENING AT Vystar Veteran's Memorial</h2>
+        <h2 class="eventsNrest">CHECKOUT THESE EVENTS HAPPENING AT VyStar Veteran's Memorial</h2>
     </div>
     <div  class="gridCont">
-    
-    </div>
-    
+       <!-- event containers will generate here -->
+   </div>
     <div class="bttmBar">
         <h2 class="eventsNrest">Checkout These Nearby Restaurants</h1>
-    </div>
-
-
-    
-
-<script src="./js/Vystar.js"></script>
-
-
-
-
-
-
-    
+            <div id="map"></div>
+            <div id="sidebar">
+              <h2>Results</h2>
+              <ul id="places" style="font-size: 17px;" ></ul>
+              <button id="more">Load more results</button>
+            </div>
+        </div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdapCkbW7WMesVzMRRwDi-_evEntjhj3A&libraries=places&callback=initMap" async defer></script>
+<script src="js/VYSTAR.js"defer></script>
 </body>
 </html>
